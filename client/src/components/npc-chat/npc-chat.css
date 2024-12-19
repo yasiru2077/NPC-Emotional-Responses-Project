@@ -9,7 +9,7 @@
 .chat-bot {
   width: 600px;
   height: 300px;
-  background-color: #2A3335;
+  background-color: #2a3335;
   border-radius: 10px;
   padding: 10px 10px;
   font-family: monospace;
@@ -18,26 +18,80 @@
 }
 
 .chat-bot > h1 {
-    margin: 0;
-    font-size: 25px;
-    padding: 10px;
+  margin: 0;
+  font-size: 25px;
+  padding: 10px;
 }
 
-.chat-bot > div{
-    background-color: black;
-    width: 100%;
-    flex: 1;
+.chat-bot > .chat-function-container {
+  background-color: black;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 10px;
+  gap: 1px;
 }
 
-.chat-bot > div > form{
-    
+.text-showcase {
+  height: 170px;
+  overflow-y: scroll;
+}
+
+.text-showcase::-webkit-scrollbar {
+  width: 5px;
+}
+
+.text-showcase::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* Color of the track */
+  
+}
+
+.text-showcase::-webkit-scrollbar-track {
+    background: #888; /* Color of the scroll thumb */
+}
+
+.text-showcase > p {
+  padding: 0;
+  margin: 0;
+}
+
+.user-responses-form > div {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  background-color: black;
+  padding-top: 10px;
+}
+
+.user-responses-form > div > input {
+  width: 80%;
+  height: 30px;
+  border-radius: 0;
+  padding-left: 10px;
+  font-family: monospace;
+  border: #4CAF50 1px solid;
+}
+
+.user-responses-form > div > input::placeholder{
+    color: antiquewhite;
+}
+
+.user-responses-form > div > button {
+  width: 20%;
+  font-weight: 700;
+  font-size: large;
+  border-radius: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color:  #66BB6A ;
+  border: 0;
+  color: black;
 }
 
 @media (max-width: 1000px) {
   .chat-bot {
     width: 500px;
   }
-  
 }
 
 @media (max-width: 700px) {
@@ -55,11 +109,15 @@
     padding: 0;
   }
 
-  .chat-bot > div{
+  .chat-bot > .chat-function-container {
     border-radius: 0px 0 10px 10px;
   }
 
   .chat-bot > h1 {
     font-size: 18px;
+  }
+
+  .user-responses-form > div > button{
+    font-size: small;
   }
 }
