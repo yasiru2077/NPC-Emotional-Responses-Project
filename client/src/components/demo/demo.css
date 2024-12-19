@@ -1,0 +1,63 @@
+.npc-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.npc-demo > div {
+  position: relative;
+}
+
+.npc-demo > div > img {
+  width: 600px;
+  border: 2px white solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.npc-demo > div > img:last-child {
+  width: 66px;
+  border: 0;
+  position: absolute;
+  left: 56%;
+  bottom: 20%;
+}
+
+@media (max-width: 1000px) {
+  .npc-demo > div > img {
+    width: 500px;
+  }
+
+  .npc-demo > div > img:last-child {
+    width: 58px;
+    
+  }
+  
+}
+
+@media (max-width: 700px) {
+  .npc-demo > div > img {
+    width: 400px;
+  }
+
+  .npc-demo > div > img:last-child {
+    width: 48px;
+    
+  }
+
+}
+
+@media (max-width: 500px) {
+  .npc-demo > div > img {
+    width: 300px;
+    padding: 0;
+  }
+
+  .npc-demo > div > img:last-child {
+    width: 38px;
+    left: 58%;
+  }
+
+}
